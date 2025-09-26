@@ -206,7 +206,7 @@
           <label class="chip">📅&nbsp;<span data-i18n="pickdate">Elige la fecha</span>
             <input id="datePicker" type="date" style="background:transparent;border:0;color:#fff;outline:none"></label>
           <span class="chip" id="quickToday" data-i18n="today" style="cursor:pointer">📆 Hoy</span>
-          <input class="search-input" id="searchInput" type="text" data-i18n-placeholder="searchPh" placeholder="Busca tu nombre de usuario completo…" />
+          <input class="search-input" id="searchInput" type="text" data-i18n-placeholder="searchPh" placeholder="Buscar nombre de usuario" />
           <button class="search-btn" id="searchBtn" data-i18n="searchBtn">Buscar</button>
           <span id="searchResult" style="margin-left:6px;"></span>
         </div>
@@ -335,7 +335,7 @@ const I18N = {
     pickdate: "Elige la fecha",
     thRank: "#", thPlayer: "Jugador", thTurnover: "Turnover",
     today: "📆 Hoy",
-    searchPh: "Busca tu nombre de usuario completo…",
+    searchPh: "Buscar nombre de usuario",
     searchBtn: "Buscar",
     searchNoData: (ymd)=>`Sin datos para ${ymd}.`,
     searchNoMatch: (q,ymd)=>`Sin coincidencias exactas para “${q}” en ${ymd}.`,
