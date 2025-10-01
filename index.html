@@ -349,7 +349,7 @@ const I18N = {
     shareTitle: "COMPARTE CON TUS AMIGOS",
     shareTg: "Compartir en Telegram",
     shareWa: "Compartir en WhatsApp",
-    shareText: "Estoy buscando la gloria en los carretes… ¡únete a la batalla por premios diarios!",
+    shareText: "Estoy compitiendo en Spins of Glory — ¡US$ 5,000 en premios cada día! ¿Crees que puedes ganarme en el leaderboard?",
     faqTitle: "Preguntas frecuentes & Términos",
     /* Your exact Spanish FAQ (bullets preserved) */
     faqHTML: `
@@ -454,7 +454,7 @@ const I18N = {
     shareTitle: "SHARE WITH YOUR FRIENDS",
     shareTg: "Share on Telegram",
     shareWa: "Share on WhatsApp",
-    shareText: "I’m chasing glory on the reels… come join the battle for daily prizes!",
+    shareText: "I’m competing in Spins of Glory — $5,000 in cash prizes available EVERY DAY! Can you beat my spot on the leaderboard?",
     faqTitle: "FAQ & Terms",
     faqHTML: "" // filled from DOM on init
   }
@@ -594,9 +594,10 @@ function getSortedDay(ymd){
   return rows.slice().sort((a,b)=> hasRank ? (a.rank||999999)-(b.rank||999999) : (b.amount||0)-(a.amount||0));
 }
 
-/* ===== I18N ===== */
+const SHARE_URL = "https://ricobetplay.co/vpdEdm";  
+
 function setShareLinks(textMsg){
-  const shareUrl = location.href.split('#')[0];
+  const shareUrl = SHARE_URL;
   $('#shareTg').href = `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(textMsg)}`;
   $('#shareWa').href = `https://api.whatsapp.com/send?text=${encodeURIComponent(textMsg + ' 👉 ' + shareUrl)}`;
 }
